@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="https://i.pinimg.com/564x/49/9b/d7/499bd7ed4652bf8d0a16c970570bb216.jpg">
+<title>Nike</title>
+<style>
+body, html {
+height: 100%;
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image{
+background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), 
+url("https://i.pinimg.com/originals/42/ac/f1/42acf1793d8f21ca8f4e1dc682608d5b.gif");
+height:50%;
+bachground-position: center;
+background-repeat:no-repeat;
+background-size:cover;
+position: relative;
+}
+
+.hero-text{
+text-align: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(50%, -50%);
+color: white;
+font-family: "Courier New", Courier, monospace;
+}
+.hero-text button{
+border: none;
+outline:0;
+display: inline-block;
+padding: 10px 25px;
+color: black;
+background-color: white;
+text-align:center;
+cursor: pointer;
+font-family: "Courier New", Courier, monospace;
+}
+.hero-text button:hover{
+background-color: black;
+color:white;
+}
+
+
+
+/* شاشة البداية */
+.intro-screen {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+background: url('https://i.pinimg.com/originals/d1/fd/e8/d1fde86ee66480ae7b10d13079491c93.gif') no-repeat center center;
+background-size: cover;
+color: #fff;display: flex;
+justify-content: center;         
+align-items: center;
+z-index: 100;
+transition: opacity 1s ease-out;
+font-size: 48px;
+font-weight: bold;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+        body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .cart-icon {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            background-color: #fff;
+            padding: 5px 10px;
+            border-radius: 50px;
+            z-index: 200;
+            cursor: pointer;
+        }
+
+        #cart-count {
+            background-color: red;
+            color: #fff;
+            padding: 0 6px;
+            border-radius: 50%;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 100px;
+        }
+
+        .product {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            margin: 10px;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .arrow-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .arrow {
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            margin: 0 10px;
+            color: #FF5733;
+        }
+
+        .cart-details {
+            display: none;
+            position: fixed;
+            top: 70px;
+            right: 15px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 300;
+        }
+
+        .cart-details img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .confirm-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            transition: 0.3s;
+            padding-top: 60px;
+            z-index: 150;
+        }
+
+        .side-menu a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .menu-btn {
+            font-size: 36px;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background-color: transparent;
+            border: none;
+            color: black;
+            cursor: pointer;
+            z-index: 200;
+        }
+
+        .close-btn {
+            font-size: 36px;
+            color: white;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .category {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .category-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+        }
+
+        .social-icons img {
+            max-width: 40px;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .product {
+                width: 90%;
+            }
+
+            .cart-icon {
+                font-size: 20px;
+                padding: 4px 8px;
+            }
+
+            .menu-btn {
+                font-size: 28px;
+            }
+
+            .intro-screen h1 {
+                font-size: 32px;
+            }
+}
+footer{
+background-color:black;
+color: white;
+text-align: center;
+padding:20px;
+font-family: Copperplate, Papyrus, fantasy;
+}
+
+</style>
+</head>
+<body>
+<div class="hero-image">
+<div class="hero-text">
+<h1 style="font-size:50px">Nike</h1>
+<p></p>
+<a href="#shop"><button>Shop Naw</button></a>
+</div>
+</div>
+<div id="intro-screen" class="intro-screen">
+<h1></h1>
+</div>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<div class="side-menu" id="side-menu">
+<span class="close-btn" onclick="toggleMenu()">✖</span>
+<a href="#tshirt" onclick="scrollToBottom()">T-shirts</a>
+<a href="#pants" onclick="scrollToBottom()">Pants</a>
+<a href="#shoes" onclick="scrollToBottom()">Shoes</a>
+</div>
+
+<div class="cart-icon" onclick="toggleCartDetails()">🛒 <span id="cart-count">0</span></div>
+
+<div class="cart-details" id="cart-details">
+<h3>تفاصيل السلة:</h3>
+<div id="cart-items"></div>
+<button class="confirm-button" onclick="confirmOrder()">تأكيد الطلب</button>
+</div>
+<!-- قسم التيشيرتات -->
+<div class="category" id="shop">
+<div class="category-title"></div>
+<footer>
+<h1 id="tshirt">T-SHIRT</h1>
+</footer>
+<div class="product-container">
+<div class="product" data-id="1" data-price="10">
+<img id="product-img-1" src="https://img01.ztat.net/article/spp-media-p1/e1e336ed45b74e80b04dc8c8cd6e27f5/547bcbd6114d4c88af07661cc91a456f.jpg?imwidth=1800&filter=packshot" alt="تيشيرت 1">
+<h2>T-shirt 1</h2>
+ <p>سعر: 10 دينار</p>
+<label for="size-tshirt-1">اختر الحجم:</label>
+<select id="size-tshirt-1">
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
+<button onclick="addToCart(1, 'https://img01.ztat.net/article/spp-media-p1/e1e336ed45b74e80b04dc8c8cd6e27f5/547bcbd6114d4c88af07661cc91a456f.jpg?imwidth=1800&filter=packshot', 10, document.getElementById('size-tshirt-1').value)">إضافة إلى السلة</button>
+<div class="arrow-container">
+<button class="arrow" onclick="changeImage(1, -1)">&#10094;</button>
+<button class="arrow" onclick="changeImage(1, 1)">&#10095;</button>
+</div>
+</div>
+<div class="product" data-id="2" data-price="20">
+<img id="product-img-2" src="https://img01.ztat.net/article/spp-media-p1/811e1b85abc547d39209f7d232f5a0da/cd5773bcaf3d47a585b9940f742f0ccf.jpg?imwidth=1800&filter=packshot" alt="تيشيرت 2">
+<h2>T-shirt 2</h2>
+<p>سعر: 20 دينار</p>
+<label for="size-tshirt-2">اختر الحجم:</label>
+<select id="size-tshirt-2">
+<option value="S">S</option>
+<option value="M">M</option>             
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
+<button onclick="addToCart(2, 'https://img01.ztat.net/article/spp-media-p1/811e1b85abc547d39209f7d232f5a0da/cd5773bcaf3d47a585b9940f742f0ccf.jpg?imwidth=1800&filter=packshot', 20, document.getElementById('size-tshirt-2').value)">إضافة إلى السلة</button>
+<div class="arrow-container">
+<button class="arrow" onclick="changeImage(2, -1)">&#10094;</button>
+<button class="arrow" onclick="changeImage(2, 1)">&#10095;</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- قسم البنطلونات -->
+<div class="category" id="pants">
+<div class="category-title"></div>
+<footer>
+<h1>PANTS</h1>
+</footer>
+<div class="product-container">
+<div class="product" data-id="3" data-price="30">
+<img id="product-img-3" src="https://img01.ztat.net/article/spp-media-p1/2598fbcb325446b6a6b3a2025861a59b/5659fda2864f4331ade662be942c9af1.jpg?imwidth=1800&filter=packshot" alt="بنطال 1">
+<h2>Pants 1</h2>
+<p>سعر: 30 دينار</p>
+<label for="size-pants-1">اختر الحجم:</label>
+<select id="size-pants-1">
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
+<button onclick="addToCart(3, 'https://img01.ztat.net/article/spp-media-p1/2598fbcb325446b6a6b3a2025861a59b/5659fda2864f4331ade662be942c9af1.jpg?imwidth=1800&filter=packshot', 30, document.getElementById('size-pants-1').value)">إضافة إلى السلة</button>
+<div class="arrow-container">
+<button class="arrow" onclick="changeImage(3, -1)">&#10094;</button>
+<button class="arrow" onclick="changeImage(3, 1)">&#10095;</button>
+</div>
+</div>
+<div class="product" data-id="4" data-price="40">
+<img id="product-img-4" src="https://img01.ztat.net/article/spp-media-p1/bac34422925541e19622fc6fef70c3d7/fdac1b9fd3fb4c9ea276710c4c96dfbb.jpg?imwidth=1800&filter=packshot" alt="بنطال 2">
+<h2>Pants 2</h2>
+<p>سعر: 40 دينار</p>
+<label for="size-pants-2">اختر الحجم:</label>
+<select id="size-pants-2">
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
+<button onclick="addToCart(4, 'https://img01.ztat.net/article/spp-media-p1/bac34422925541e19622fc6fef70c3d7/fdac1b9fd3fb4c9ea276710c4c96dfbb.jpg?imwidth=1800&filter=packshot', 40, document.getElementById('size-pants-2').value)">إضافة إلى السلة</button>
+<div class="arrow-container">
+<button class="arrow" onclick="changeImage(4, -1)">&#10094;</button>
+<button class="arrow" onclick="changeImage(4, 1)">&#10095;</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- قسم الأحذية -->
+<div class="category" id="shoes">
+<footer>
+<h1>SHOES</h1>
+</footer>
+<div class="category-title"></div>
+<div class="product-container">
+<div class="product" data-id="5" data-price="50">
+<img id="product-img-5" src="https://img01.ztat.net/article/spp-media-p1/88d76a358be434afa734aec5b3cad9d5/ea0e5fb353e54e33acf2dc9cb3bcd4ae.jpg?imwidth=1800" alt="حذاء 1">
+<h2>Shoes 1</h2>
+<p>سعر: 50 دينار</p>
+<label for="size-shoes-1">اختر الحجم:</label>
+<select id="size-shoes-1">
+<option value="S">42</option>
+<option value="M">43</option>
+<option value="L"44</option>
+<option value="XL">45</option>
+</select>
+<button onclick="addToCart(5, 'https://img01.ztat.net/article/spp-media-p1/88d76a358be434afa734aec5b3cad9d5/ea0e5fb353e54e33acf2dc9cb3bcd4ae.jpg?imwidth=1800', 50, document.getElementById('size-shoes-1').value)">إضافة إلى السلة</button>
+<div class="arrow-container">
+<button class="arrow" onclick="changeImage(5, -1)">&#10094;</button>
+<button class="arrow" onclick="changeImage(5, 1)">&#10095;</button>
+</div>
+</div>
+<div class="product" data-id="6" data-price="60">
+<img id="product-img-6" src="https://img01.ztat.net/article/spp-media-p1/4b06cc9e955445e197baa83429848600/81e8b19196894ada9fbae5a84986e22d.jpg?imwidth=1800" alt="حذاء 2">
+<h2>Shoes 2</h2>
+<p>سعر: 60 دينار</p>
+<label for="size-shoes-2">اختر الحجم:</label>
+<select id="size-shoes-2">
+<option value="S">40</option>
+<option value="M">41</option>
+<option value="L">42</option>
+<option value="XL">43</option>
+</select>
+<button onclick="addToCart(6, 'https://img01.ztat.net/article/spp-media-p1/4b06cc9e955445e197baa83429848600/81e8b19196894ada9fbae5a84986e22d.jpg?imwidth=1800', 60, document.getElementById('size-shoes-2').value)">إضافة إلى السلة</button>
+<div class="arrow-container">
+<button class="arrow" onclick="changeImage(6, -1)">&#10094;</button>
+<button class="arrow" onclick="changeImage(6, 1)">&#10095;</button>
+</div>
+</div>
+</div>
+</div>
+
+
+<script>
+const productImages = {
+1: [
+'https://img01.ztat.net/article/spp-media-p1/e1e336ed45b74e80b04dc8c8cd6e27f5/547bcbd6114d4c88af07661cc91a456f.jpg?imwidth=1800&filter=packshot',
+'https://img01.ztat.net/article/spp-media-p1/fc29ba89be6b4997bfbc6a78b757282f/7f1f850a9c6244c39ba06b3c412db22d.jpg?imwidth=1800','https://img01.ztat.net/article/spp-media-p1/e1e336ed45b74e80b04dc8c8cd6e27f5/547bcbd6114d4c88af07661cc91a456f.jpg?imwidth=1800&filter=packshot',
+'https://img01.ztat.net/article/spp-media-p1/1a1a0fb5d8d543b09a9c60628b91eedb/5b4af2de948c4d04821b29feb40de7a4.jpg?imwidth=1800',
+],
+        2: [
+            'https://img01.ztat.net/article/spp-media-p1/811e1b85abc547d39209f7d232f5a0da/cd5773bcaf3d47a585b9940f742f0ccf.jpg?imwidth=1800&filter=packshot',
+            'https://img01.ztat.net/article/spp-media-p1/1a1a0fb5d8d543b09a9c60628b91eedb/5b4af2de948c4d04821b29feb40de7a4.jpg?imwidth=1800',
+            'https://img01.ztat.net/article/spp-media-p1/811e1b85abc547d39209f7d232f5a0da/cd5773bcaf3d47a585b9940f742f0ccf.jpg?imwidth=1800&filter=packshot',
+        ],
+        3: [
+            'https://img01.ztat.net/article/spp-media-p1/2598fbcb325446b6a6b3a2025861a59b/5659fda2864f4331ade662be942c9af1.jpg?imwidth=1800&filter=packshot',
+            'https://img01.ztat.net/article/spp-media-p1/7b6b447122034343980c6dabeab93440/1f1afbe441ea4ff4a82f5c735fbc6485.jpg?imwidth=1800',
+            'https://img01.ztat.net/article/spp-media-p1/2598fbcb325446b6a6b3a2025861a59b/5659fda2864f4331ade662be942c9af1.jpg?imwidth=1800&filter=packshot',        
+        ],
+        4: [
+            'https://img01.ztat.net/article/spp-media-p1/bac34422925541e19622fc6fef70c3d7/fdac1b9fd3fb4c9ea276710c4c96dfbb.jpg?imwidth=1800&filter=packshot',
+            'https://img01.ztat.net/article/spp-media-p1/669173c806ea45308b837a52e350a4fb/7fa79b1a8d1f475aacfbabe076f84af9.jpg?imwidth=1800',
+            'https://img01.ztat.net/article/spp-media-p1/bac34422925541e19622fc6fef70c3d7/fdac1b9fd3fb4c9ea276710c4c96dfbb.jpg?imwidth=1800&filter=packshot',
+        ],
+        5: [
+            'https://img01.ztat.net/article/spp-media-p1/88d76a358be434afa734aec5b3cad9d5/ea0e5fb353e54e33acf2dc9cb3bcd4ae.jpg?imwidth=1800',
+            'https://img01.ztat.net/article/spp-media-p1/1c1f1fc6acb9339bbff20a5eba4d6072/b1a12f099e4a4f9ba6a3b231c6f8f93b.jpg?imwidth=1800',
+            'https://img01.ztat.net/article/spp-media-p1/88d76a358be434afa734aec5b3cad9d5/ea0e5fb353e54e33acf2dc9cb3bcd4ae.jpg?imwidth=1800',        
+        ],
+        6: [
+            'https://img01.ztat.net/article/spp-media-p1/4b06cc9e955445e197baa83429848600/81e8b19196894ada9fbae5a84986e22d.jpg?imwidth=1800',
+            'https://img01.ztat.net/article/spp-media-p1/9c44b2f1c2ae4b589ebd7b4d48ffeba7/69585b84096746f69dbd26778a1f7a46.jpg?imwidth=1800',
+            'https://img01.ztat.net/article/spp-media-p1/4b06cc9e955445e197baa83429848600/81e8b19196894ada9fbae5a84986e22d.jpg?imwidth=1800',           
+        ],
+    };
+
+    let cart = [];
+    
+    function addToCart(id, img, price, size) {
+        cart.push({ id, img, price, size });
+        document.getElementById('cart-count').innerText = cart.length;
+    }
+
+    function toggleCartDetails() {
+        const cartDetails = document.getElementById('cart-details');
+        cartDetails.style.display = cartDetails.style.display === 'block' ? 'none' : 'block';
+        displayCartItems();
+    }
+
+    function displayCartItems() {
+        const cartItems = document.getElementById('cart-items');
+        cartItems.innerHTML = '';
+        cart.forEach(item => {
+            cartItems.innerHTML += `
+                <div>
+                    <img src="${item.img}" alt="Product" />
+                    <span>سعر: ${item.price} دينار, حجم: ${item.size}</span>
+                </div>
+            `;
+        });
+    }
+
+    function confirmOrder() {
+        alert('تم تأكيد الطلب!');
+        cart = [];
+        document.getElementById('cart-count').innerText = cart.length;
+        displayCartItems();
+    }
+
+    function changeImage(productId, direction) {
+        const images = productImages[productId];
+        const imgElement = document.getElementById(`product-img-${productId}`);
+        const currentImageIndex = images.indexOf(imgElement.src);
+        const newImageIndex = (currentImageIndex + direction + images.length) % images.length;
+        imgElement.src = images[newImageIndex];
+    }
+
+    function toggleMenu() {
+        const sideMenu = document.getElementById('side-menu');
+        const closeButton = document.querySelector('.close-btn');
+        if (sideMenu.style.left === '0px') {
+            sideMenu.style.left = '-250px';
+            closeButton.style.display = 'none';
+        } else {
+            sideMenu.style.left = '0px';
+            closeButton.style.display = 'block';
+        }
+    }
+
+    function scrollToBottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    window.onload = function() {
+        const introScreen = document.getElementById('intro-screen');
+        const h1 = introScreen.querySelector('h1');
+        h1.innerText = '';
+        setTimeout(() => {
+            introScreen.style.opacity = '0';
+            setTimeout(() => {
+                introScreen.style.display = 'none';
+            }, 1000);
+        }, 3000);
+    };
+
+
+function addToCart(id, img, price, size) {
+    cart.push({ id, img, price, size });
+    document.getElementById('cart-count').innerText = cart.length;
+    displayCartItems();
+}
+
+function displayCartItems() {
+    const cartItems = document.getElementById('cart-items');
+    cartItems.innerHTML = '';
+    cart.forEach((item, index) => {
+        cartItems.innerHTML += `
+            <div>
+                <img src="${item.img}" alt="Product" />
+                <span>سعر: ${item.price} دينار, حجم: ${item.size}</span>
+                <button onclick="removeFromCart(${index})">حذف</button>
+            </div>
+        `;
+    });
+}
+
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    document.getElementById('cart-count').innerText = cart.length;
+    displayCartItems();
+}
+
+
+
+
+</script>
+
+<div class="footer">
+<div class="social-icons">
+<a href="https://www.facebook.com/nike/"><img src="https://i.pinimg.com/control/564x/70/b9/3a/70b93af70f637f2d8a2dec42bfcf23f8.jpg"></a>
+<a href="https://x.com/nike"><img src="https://i.pinimg.com/control/564x/cc/31/6f/cc316f97197528e5e26e613a93ab16a4.jpg"></a>
+<a href="https://www.instagram.com/nike/"><img src="https://i.pinimg.com/control/564x/2f/7f/90/2f7f90949b9a9cd2cc221adb39d39b7d.jpg"></a>
+</div>
+</div>
+
+</body>
+</html>
